@@ -45,4 +45,5 @@ DBProject - מערכת לניהול תוכניות אימון
 ביצוע גיבוי: נוצר גיבוי מלא של מסד הנתונים 
 ![image](https://github.com/user-attachments/assets/648f209d-62cb-4fed-9348-41addf9aec26)
 
-בדיקת שחזור: הגיבוי שוחזר בהצלחה על מחשב אחר.
+בדיקת שחזור: הגיבוי שוחזר בהצלחה על המחשב.
+![image](https://github.com/user-attachments/assets/eec6ef44-a439-4762-a29d-dc41a2a1a047)
