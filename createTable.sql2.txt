@@ -1,0 +1,58 @@
+CREATE TABLE TrainingProgram
+(
+  ProgramID INT NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  StartDate DATE NOT NULL,
+  EndDate DATE NOT NULL,
+  PRIMARY KEY (ProgramID)
+);
+
+CREATE TABLE Trainee
+(
+  TraineeID INT NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  DateOfBirth DATE NOT NULL,
+  Email VARCHAR(20) NOT NULL,
+  Phone VARCHAR(10) NOT NULL,
+  RegistrationDate DATE NOT NULL,
+  PRIMARY KEY (TraineeID)
+);
+
+CREATE TABLE Trainer
+(
+  TrainerID INT NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  Spacialization VARCHAR(20) NOT NULL,
+  Phone VARCHAR(20) NOT NULL,
+  HireDate DATE NOT NULL,
+  ProgramID INT NOT NULL,
+  TraineeID INT NOT NULL,
+  PRIMARY KEY (TrainerID),
+  FOREIGN KEY (ProgramID) REFERENCES TrainingProgram(ProgramID),
+  FOREIGN KEY (TraineeID) REFERENCES Trainee(TraineeID)
+);
+
+CREATE TABLE TrainerProgram
+(
+  EnrollmentDate DATE NOT NULL
+);
+
+CREATE TABLE Exercise
+(
+  ExerciseID INT NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  Description VARCHAR(20) NOT NULL,
+  PRIMARY KEY (ExerciseID),
+  FOREIGN KEY (ProgramID) REFERENCES TrainingProgram(ProgramID)
+);
+
+CREATE TABLE Equipment
+(
+  EquipmentID INT NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  PurchaseDate DATE NOT NULL,
+  ConditionStatus VARCHAR(20) NOT NULL,
+  ExerciseID INT NOT NULL,
+  PRIMARY KEY (EquipmentID),
+  FOREIGN KEY (ExerciseID) REFERENCES Exercise(ExerciseID)
+);

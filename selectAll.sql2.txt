@@ -1,0 +1,6 @@
+SELECT * FROM TrainingProgram;
+SELECT * FROM Trainee;
+SELECT * FROM Trainer;
+SELECT * FROM Exercise;
+SELECT * FROM Equipment;
+SELECT * FROM TrainerProgram;

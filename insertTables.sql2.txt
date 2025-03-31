@@ -1,0 +1,35 @@
+-- הכנסת נתונים לטבלת Trainee
+INSERT INTO Trainee (TraineeID, Name, DateOfBirth, Email, Phone, RegistrationDate) VALUES
+(1, 'David Cohen', TO_DATE('1995-06-15', 'YYYY-MM-DD'), 'david@mail.com', '052-1234567', TO_DATE('2023-01-10', 'YYYY-MM-DD')),
+(2, 'Sarah Levi', TO_DATE('1998-09-22', 'YYYY-MM-DD'), 'sarah@mail.com', '054-7654321', TO_DATE('2023-02-15', 'YYYY-MM-DD')),
+(3, 'Michael Azulay', TO_DATE('2000-12-05', 'YYYY-MM-DD'), 'michael@mail.com', '050-9876543', TO_DATE('2023-03-20', 'YYYY-MM-DD'));
+
+-- הכנסת נתונים לטבלת Trainer
+INSERT INTO Trainer (TrainerID, Name, Specialization, Phone, HireDate) VALUES
+(1, 'Eli Bar', 'Strength Training', '053-1122334', TO_DATE('2020-05-01', 'YYYY-MM-DD')),
+(2, 'Rachel Shalom', 'Cardio & HIIT', '058-4433221', TO_DATE('2018-08-12', 'YYYY-MM-DD')),
+(3, 'Yossi Ben-David', 'Flexibility & Yoga', '050-2233445', TO_DATE('2019-11-25', 'YYYY-MM-DD'));
+
+-- הכנסת נתונים לטבלת TrainingProgram
+INSERT INTO TrainingProgram (ProgramID, Name, StartDate, EndDate, TrainerID) VALUES
+(1, 'Beginner Strength', TO_DATE('2024-04-01', 'YYYY-MM-DD'), TO_DATE('2024-06-30', 'YYYY-MM-DD'), 1),
+(2, 'HIIT Fat Burn', TO_DATE('2024-03-15', 'YYYY-MM-DD'), TO_DATE('2024-05-15', 'YYYY-MM-DD'), 2),
+(3, 'Yoga for Relaxation', TO_DATE('2024-02-01', 'YYYY-MM-DD'), TO_DATE('2024-04-30', 'YYYY-MM-DD'), 3);
+
+-- הכנסת נתונים לטבלת TraineeProgram
+INSERT INTO TraineeProgram (TraineeID, ProgramID, EnrollmentDate) VALUES
+(1, 1, TO_DATE('2024-04-01', 'YYYY-MM-DD')),
+(2, 2, TO_DATE('2024-03-16', 'YYYY-MM-DD')),
+(3, 3, TO_DATE('2024-02-02', 'YYYY-MM-DD'));
+
+-- הכנסת נתונים לטבלת Equipment
+INSERT INTO Equipment (EquipmentID, Name, PurchaseDate, ConditionStatus, ProgramID) VALUES
+(1, 'Treadmill', TO_DATE('2022-01-10', 'YYYY-MM-DD'), 'Good', 2),
+(2, 'Dumbbells Set', TO_DATE('2021-12-05', 'YYYY-MM-DD'), 'Excellent', 1),
+(3, 'Yoga Mats', TO_DATE('2023-07-15', 'YYYY-MM-DD'), 'New', 3);
+
+-- הכנסת נתונים לטבלת Exercise
+INSERT INTO Exercise (ExerciseID, Name, Description, EquipmentID, ProgramID) VALUES
+(1, 'Bench Press', 'Chest strength exercise using a barbell.', 2, 1),
+(2, 'Treadmill Running', 'Cardio workout on a treadmill.', 1, 2),
+(3, 'Sun Salutation', 'Yoga warm-up sequence.', 3, 3);
