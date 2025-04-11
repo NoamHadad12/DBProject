@@ -1,0 +1,65 @@
+
+-- טבלת Trainee
+CREATE TABLE Trainee (
+    TraineeID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(50),
+    Phone VARCHAR(15),
+    DateOfBirth DATE
+);
+
+-- טבלת Trainer (ירושה מ-Trainee)
+-- קודם ניצור את TrainingProgram בלי FK ל-Trainer (כי היא עוד לא קיימת)
+CREATE TABLE TrainingProgram (
+    ProgramID SERIAL PRIMARY KEY,
+    ProgramName VARCHAR(50),
+    StartDate DATE,
+    EndDate DATE,
+    TrainerID INT -- נוסיף לו FK אחרי ש-Trainer תיווצר
+);
+
+-- טבלת Trainer
+CREATE TABLE Trainer (
+    TrainerID INT PRIMARY KEY,
+    ProgramID INT,
+    HireDate DATE,
+    EmployeeID INT,
+    FOREIGN KEY (TrainerID) REFERENCES Trainee(TraineeID),
+    FOREIGN KEY (ProgramID) REFERENCES TrainingProgram(ProgramID)
+);
+
+-- עכשיו נוסיף את המפתח הזר ל-TrainerID בטבלת TrainingProgram
+ALTER TABLE TrainingProgram
+ADD CONSTRAINT fk_trainer FOREIGN KEY (TrainerID) REFERENCES Trainer(TrainerID);
+
+-- טבלת Exercise
+CREATE TABLE Exercise (
+    ExerciseID SERIAL PRIMARY KEY,
+    ExName VARCHAR(50),
+    Description VARCHAR(255),
+    ProgramID INT,
+    FOREIGN KEY (ProgramID) REFERENCES TrainingProgram(ProgramID)
+);
+
+-- טבלת Equipment
+CREATE TABLE Equipment (
+    EquipmentID SERIAL PRIMARY KEY,
+    EqName VARCHAR(50),
+    PurchaseDate DATE,
+    ConditionStatus VARCHAR(20),
+    ExerciseID INT,
+    FOREIGN KEY (ExerciseID) REFERENCES Exercise(ExerciseID)
+);
+
+-- טבלת TrainingLog
+CREATE TABLE TrainingLog (
+    LogID SERIAL PRIMARY KEY,
+    TraineeID INT,
+    ProgramID INT,
+    Duration INT,
+    Repetitions INT,
+    ProgramName VARCHAR(50),
+    FOREIGN KEY (TraineeID) REFERENCES Trainee(TraineeID),
+    FOREIGN KEY (ProgramID) REFERENCES TrainingProgram(ProgramID)
+);

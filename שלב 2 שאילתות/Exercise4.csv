@@ -1,0 +1,401 @@
+ExerciseID,ExName,Description,ProgramID
+100,calf raise,Sled push strength training,194
+101,curl bar,Dynamic stretching exercises,334
+102,toe touch,Boxing cardio workout,437
+103,pull up,Bodyweight strength exercises,149
+104,wall sit,Grip strength development,105
+105,high knees,Martial arts conditioning,238
+106,back row,TRX suspension training,126
+107,crunches,Cycling endurance session,406
+108,wall sit,Mobility and flexibility routine,253
+109,sit up,Resistance band workout,282
+110,jump jack,Sprint interval training,359
+111,jump jack,Battle rope strength session,201
+112,toe touch,Yoga for strength,263
+113,chest fly,Dynamic stretching exercises,106
+114,lunges,Explosive power training,255
+115,deadlift,Dynamic stretching exercises,306
+116,arm circle,Medicine ball power training,183
+117,leg press,Core stability exercises,217
+118,back row,Weightlifting fundamentals practice,110
+119,squat,Sandbag functional workout,144
+120,bench dip,Core and balance training,228
+121,toe touch,Grip strength development,210
+122,pull up,Sandbag functional workout,487
+123,jump jack,Upper-body strength focus,379
+124,leg press,Resistance band workout,140
+125,leg press,High-intensity interval training,476
+126,side plank,Rowing endurance challenge,247
+127,wall sit,Balance and coordination drills,289
+128,knee tuck,Dynamic stretching exercises,134
+129,bench dip,Speed and agility drills,195
+130,knee tuck,Weightlifting fundamentals practice,458
+131,leg curl,Jump rope endurance workout,115
+132,leg curl,Rowing endurance challenge,177
+133,chest fly,High-intensity interval training,286
+134,bike ride,Strength and conditioning plan,489
+135,wall sit,Sandbag functional workout,292
+136,jog,Grip strength development,402
+137,pull up,Yoga for strength,142
+138,leg press,Plyometric jump training,408
+139,jump rope,Dynamic stretching exercises,275
+140,leg raise,Martial arts conditioning,396
+141,step up,Dynamic stretching exercises,495
+142,pull up,Medicine ball power training,246
+143,push up,Endurance running session,484
+144,lunges,High-intensity interval training,428
+145,chest fly,Stair climbing workout,169
+146,deadlift,Martial arts conditioning,227
+147,chest fly,Full-body strength workout,154
+148,plank,Kettlebell full-body workout,107
+149,knee tuck,Dynamic stretching exercises,127
+150,glute bridge,Martial arts conditioning,326
+151,high knees,Jump rope endurance workout,318
+152,hip thrust,Sandbag functional workout,415
+153,jog,Plyometric jump training,150
+154,lunges,Cycling endurance session,340
+155,step up,High-intensity interval training,432
+156,step up,Full-body strength workout,117
+157,push up,Martial arts conditioning,399
+158,sit up,Kettlebell full-body workout,171
+159,lunges,Endurance running session,294
+160,jump rope,Athletic performance drills,283
+161,leg press,Medicine ball power training,170
+162,squat,Bodyweight strength exercises,382
+163,pull up,Core stability exercises,222
+164,side plank,Sprint interval training,362
+165,bike ride,Circuit training routine,433
+166,leg curl,Lower-body muscle building,347
+167,deadlift,Dynamic stretching exercises,265
+168,bench dip,Grip strength development,452
+169,high knees,Circuit training routine,486
+170,push up,Strength and conditioning plan,349
+171,glute bridge,Circuit training routine,385
+172,pull up,Core and balance training,113
+173,squat,Sandbag functional workout,214
+174,leg press,Cardio endurance circuit,259
+175,hip thrust,Functional movement drills,204
+176,lunges,Bodyweight strength exercises,479
+177,plank,Sprint interval training,375
+178,donkey kick,Medicine ball power training,446
+179,bench dip,Speed and agility drills,305
+180,calf raise,Balance and coordination drills,178
+181,leg curl,Core and balance training,234
+182,glute bridge,Cycling endurance session,147
+183,leg curl,Functional movement drills,293
+184,burpees,Functional strength exercises,388
+185,deadlift,Boxing cardio workout,355
+186,curl bar,Dumbbell strength session,376
+187,squat,TRX suspension training,475
+188,toe touch,Balance and coordination drills,277
+189,jog,Strength and conditioning plan,496
+190,push up,Dynamic stretching exercises,322
+191,chest fly,Sandbag functional workout,139
+192,high knees,Rowing endurance challenge,321
+193,toe touch,Cycling endurance session,138
+194,burpees,Explosive power training,351
+195,step up,Battle rope strength session,161
+196,plank,Full-body strength workout,419
+197,bike ride,Sprint interval training,344
+198,plank,Battle rope strength session,273
+199,calf raise,Core stability exercises,315
+200,push up,High-intensity interval training,323
+201,leg curl,Rowing endurance challenge,310
+202,leg raise,Sprint interval training,151
+203,jog,Balance and coordination drills,300
+204,squat,Lower-body muscle building,395
+205,jog,Sprint interval training,181
+206,plank,Core stability exercises,278
+207,sit up,Jump rope endurance workout,179
+208,knee tuck,Martial arts conditioning,133
+209,leg press,Core stability exercises,471
+210,sit up,Martial arts conditioning,450
+211,pull up,High-intensity interval training,216
+212,high knees,Mobility and flexibility routine,164
+213,curl bar,Core stability exercises,380
+214,high knees,Speed and agility drills,114
+215,chest fly,Sandbag functional workout,331
+216,sit up,High-intensity interval training,270
+217,chest fly,Sandbag functional workout,311
+218,curl bar,Lower-body muscle building,281
+219,calf raise,Flexibility and recovery session,196
+220,crunches,Upper-body strength focus,346
+221,jump jack,Battle rope strength session,143
+222,bike ride,High-intensity interval training,198
+223,sit up,Flexibility and recovery session,314
+224,bike ride,Endurance running session,337
+225,hip thrust,Cardio endurance circuit,108
+226,jump rope,Resistance band workout,448
+227,side plank,Functional strength exercises,250
+228,jump rope,Core stability exercises,478
+229,jump jack,Yoga for strength,232
+230,burpees,Cardio endurance circuit,413
+231,squat,Martial arts conditioning,324
+232,calf raise,Lower-body muscle building,188
+233,bench dip,Plyometric jump training,272
+234,glute bridge,Athletic performance drills,436
+235,leg curl,Core and balance training,454
+236,bench dip,Boxing cardio workout,295
+237,bench dip,Sled push strength training,470
+238,jog,Yoga for strength,364
+239,glute bridge,Balance and coordination drills,391
+240,side plank,Kettlebell full-body workout,288
+241,deadlift,Medicine ball power training,466
+242,bench dip,Sled push strength training,383
+243,hip thrust,Speed and agility drills,197
+244,push up,Bodyweight strength exercises,285
+245,jump rope,Rowing endurance challenge,268
+246,toe touch,Boxing cardio workout,463
+247,calf raise,Athletic performance drills,290
+248,chest fly,Boxing cardio workout,175
+249,lunges,Stair climbing workout,421
+250,leg curl,Powerlifting technique practice,148
+251,high knees,Sprint interval training,128
+252,wall sit,Functional movement drills,368
+253,jog,Grip strength development,199
+254,jump rope,Sandbag functional workout,412
+255,jog,Core and balance training,172
+256,side plank,Speed and agility drills,369
+257,arm circle,Dumbbell strength session,467
+258,side plank,Endurance running session,301
+259,wall sit,High-intensity interval training,208
+260,calf raise,Sled push strength training,459
+261,high knees,Battle rope strength session,121
+262,calf raise,Resistance band workout,482
+263,jog,Core and balance training,109
+264,step up,Core stability exercises,245
+265,back row,Explosive power training,330
+266,pull up,Explosive power training,200
+267,push up,Dynamic stretching exercises,354
+268,squat,Balance and coordination drills,481
+269,side plank,Sandbag functional workout,184
+270,plank,Jump rope endurance workout,497
+271,step up,Resistance band workout,483
+272,wall sit,Stair climbing workout,313
+273,leg press,Core stability exercises,457
+274,leg press,Battle rope strength session,120
+275,bike ride,Cardio endurance circuit,480
+276,push up,Core and balance training,132
+277,crunches,Endurance running session,332
+278,pull up,Upper-body strength focus,336
+279,glute bridge,Sprint interval training,112
+280,arm circle,Bodyweight strength exercises,498
+281,donkey kick,Upper-body strength focus,167
+282,bike ride,Full-body strength workout,397
+283,glute bridge,Mobility and flexibility routine,125
+284,jump rope,Jump rope endurance workout,447
+285,donkey kick,Battle rope strength session,429
+286,arm circle,Yoga for strength,157
+287,high knees,Grip strength development,223
+288,leg raise,Jump rope endurance workout,308
+289,leg raise,Full-body strength workout,182
+290,calf raise,Speed and agility drills,416
+291,high knees,Kettlebell full-body workout,269
+292,deadlift,Weightlifting fundamentals practice,180
+293,burpees,Sandbag functional workout,261
+294,glute bridge,Rowing endurance challenge,488
+295,jog,Flexibility and recovery session,327
+296,chest fly,Core and balance training,100
+297,squat,Functional strength exercises,119
+298,bike ride,Mobility and flexibility routine,257
+299,burpees,High-intensity interval training,372
+300,jump rope,Flexibility and recovery session,401
+301,curl bar,Sled push strength training,357
+302,high knees,Explosive power training,420
+303,deadlift,Explosive power training,333
+304,leg raise,Endurance running session,190
+305,toe touch,Bodyweight strength exercises,173
+306,step up,Circuit training routine,155
+307,jump rope,Martial arts conditioning,252
+308,deadlift,Speed and agility drills,176
+309,pull up,Sled push strength training,338
+310,plank,TRX suspension training,229
+311,donkey kick,Core and balance training,248
+312,jump rope,Dumbbell strength session,145
+313,donkey kick,TRX suspension training,241
+314,pull up,Lower-body muscle building,103
+315,leg raise,Jump rope endurance workout,378
+316,jog,Boxing cardio workout,296
+317,back row,Full-body strength workout,213
+318,pull up,Boxing cardio workout,435
+319,pull up,Stair climbing workout,262
+320,bike ride,Plyometric jump training,316
+321,push up,Medicine ball power training,153
+322,high knees,Lower-body muscle building,244
+323,jump jack,Rowing endurance challenge,329
+324,toe touch,Athletic performance drills,264
+325,push up,Grip strength development,444
+326,knee tuck,Athletic performance drills,249
+327,donkey kick,Weightlifting fundamentals practice,160
+328,knee tuck,Battle rope strength session,455
+329,glute bridge,Functional strength exercises,491
+330,chest fly,Functional movement drills,162
+331,leg press,Upper-body strength focus,166
+332,glute bridge,Functional strength exercises,219
+333,sit up,Upper-body strength focus,426
+334,high knees,Core and balance training,358
+335,sit up,Circuit training routine,328
+336,hip thrust,Boxing cardio workout,123
+337,hip thrust,Endurance running session,158
+338,burpees,Mobility and flexibility routine,374
+339,bike ride,Yoga for strength,411
+340,squat,Kettlebell full-body workout,319
+341,donkey kick,Weightlifting fundamentals practice,443
+342,sit up,Rowing endurance challenge,352
+343,pull up,Full-body strength workout,394
+344,leg curl,Athletic performance drills,156
+345,deadlift,Martial arts conditioning,386
+346,leg press,Balance and coordination drills,202
+347,leg curl,Explosive power training,490
+348,curl bar,Strength and conditioning plan,499
+349,glute bridge,Powerlifting technique practice,168
+350,crunches,TRX suspension training,423
+351,curl bar,Boxing cardio workout,136
+352,knee tuck,Stair climbing workout,424
+353,bike ride,Balance and coordination drills,193
+354,high knees,Battle rope strength session,343
+355,leg raise,Cycling endurance session,417
+356,jog,Strength and conditioning plan,165
+357,wall sit,Weightlifting fundamentals practice,287
+358,push up,Sandbag functional workout,209
+359,calf raise,Boxing cardio workout,111
+360,wall sit,Cycling endurance session,348
+361,leg raise,Explosive power training,407
+362,leg curl,Medicine ball power training,356
+363,pull up,Cycling endurance session,101
+364,side plank,Rowing endurance challenge,339
+365,sit up,Sled push strength training,189
+366,knee tuck,Balance and coordination drills,231
+367,leg raise,Sprint interval training,233
+368,pull up,Battle rope strength session,131
+369,plank,Sprint interval training,430
+370,high knees,Lower-body muscle building,373
+371,arm circle,Martial arts conditioning,280
+372,high knees,Grip strength development,493
+373,leg press,Medicine ball power training,186
+374,sit up,Rowing endurance challenge,461
+375,jog,Resistance band workout,163
+376,side plank,Circuit training routine,187
+377,bike ride,Cardio endurance circuit,284
+378,bike ride,Bodyweight strength exercises,393
+379,high knees,Explosive power training,218
+380,donkey kick,Stair climbing workout,469
+381,jump rope,Resistance band workout,276
+382,arm circle,Upper-body strength focus,441
+383,donkey kick,Full-body strength workout,203
+384,sit up,Flexibility and recovery session,220
+385,plank,Resistance band workout,267
+386,leg press,Endurance running session,317
+387,bench dip,Endurance running session,129
+388,chest fly,Battle rope strength session,215
+389,glute bridge,Boxing cardio workout,398
+390,jog,Flexibility and recovery session,465
+391,hip thrust,Dumbbell strength session,425
+392,squat,Speed and agility drills,251
+393,plank,Jump rope endurance workout,494
+394,toe touch,Dumbbell strength session,345
+395,donkey kick,Balance and coordination drills,474
+396,squat,Bodyweight strength exercises,206
+397,toe touch,Powerlifting technique practice,403
+398,plank,High-intensity interval training,390
+399,hip thrust,Resistance band workout,225
+400,lunges,Speed and agility drills,116
+401,squat,Sprint interval training,366
+402,calf raise,Dumbbell strength session,303
+403,bench dip,Yoga for strength,207
+404,deadlift,Core and balance training,266
+405,glute bridge,Endurance running session,405
+406,leg curl,High-intensity interval training,211
+407,jump rope,Grip strength development,291
+408,jog,Upper-body strength focus,363
+409,back row,Flexibility and recovery session,381
+410,donkey kick,TRX suspension training,243
+411,high knees,Cardio endurance circuit,442
+412,deadlift,Kettlebell full-body workout,146
+413,chest fly,Bodyweight strength exercises,274
+414,plank,Medicine ball power training,258
+415,glute bridge,Balance and coordination drills,392
+416,wall sit,Speed and agility drills,320
+417,glute bridge,Powerlifting technique practice,185
+418,leg press,Cycling endurance session,460
+419,deadlift,Plyometric jump training,384
+420,hip thrust,Core and balance training,473
+421,crunches,High-intensity interval training,260
+422,leg raise,Endurance running session,477
+423,push up,Kettlebell full-body workout,438
+424,chest fly,Speed and agility drills,377
+425,wall sit,Yoga for strength,400
+426,curl bar,Cycling endurance session,221
+427,jog,Flexibility and recovery session,367
+428,jump rope,Dynamic stretching exercises,418
+429,toe touch,Speed and agility drills,302
+430,knee tuck,Functional strength exercises,312
+431,chest fly,Cycling endurance session,135
+432,plank,Powerlifting technique practice,271
+433,crunches,High-intensity interval training,353
+434,jog,Cycling endurance session,472
+435,burpees,Medicine ball power training,342
+436,step up,Explosive power training,440
+437,push up,Cardio endurance circuit,118
+438,arm circle,Circuit training routine,439
+439,jog,Strength and conditioning plan,410
+440,toe touch,Core stability exercises,451
+441,bench dip,Endurance running session,279
+442,glute bridge,Rowing endurance challenge,492
+443,jump jack,Balance and coordination drills,453
+444,pull up,Functional movement drills,370
+445,donkey kick,Core stability exercises,240
+446,burpees,Rowing endurance challenge,371
+447,jog,Boxing cardio workout,102
+448,deadlift,Flexibility and recovery session,389
+449,glute bridge,Sandbag functional workout,304
+450,arm circle,Dynamic stretching exercises,212
+451,curl bar,Bodyweight strength exercises,307
+452,knee tuck,Flexibility and recovery session,297
+453,wall sit,Cycling endurance session,254
+454,leg raise,Grip strength development,464
+455,chest fly,Lower-body muscle building,152
+456,calf raise,Explosive power training,445
+457,jog,Medicine ball power training,350
+458,deadlift,Stair climbing workout,387
+459,chest fly,Dynamic stretching exercises,468
+460,wall sit,Stair climbing workout,242
+461,leg raise,Circuit training routine,414
+462,wall sit,Dynamic stretching exercises,137
+463,plank,Resistance band workout,239
+464,calf raise,Dynamic stretching exercises,230
+465,bike ride,Dynamic stretching exercises,404
+466,glute bridge,Strength and conditioning plan,174
+467,lunges,Rowing endurance challenge,341
+468,toe touch,Yoga for strength,309
+469,step up,Bodyweight strength exercises,124
+470,push up,Sled push strength training,236
+471,burpees,Kettlebell full-body workout,335
+472,jump jack,Sandbag functional workout,365
+473,bike ride,Cardio endurance circuit,205
+474,donkey kick,Functional movement drills,298
+475,bike ride,Resistance band workout,237
+476,glute bridge,Full-body strength workout,256
+477,lunges,Resistance band workout,361
+478,toe touch,Grip strength development,122
+479,squat,High-intensity interval training,422
+480,wall sit,Stair climbing workout,431
+481,leg raise,Balance and coordination drills,427
+482,wall sit,Functional strength exercises,456
+483,bench dip,Dynamic stretching exercises,325
+484,bike ride,Dynamic stretching exercises,192
+485,bench dip,Core stability exercises,434
+486,burpees,Resistance band workout,141
+487,knee tuck,Dynamic stretching exercises,409
+488,burpees,TRX suspension training,360
+489,plank,Bodyweight strength exercises,449
+490,side plank,Boxing cardio workout,485
+491,knee tuck,Plyometric jump training,226
+492,crunches,Explosive power training,462
+493,pull up,Flexibility and recovery session,130
+494,chest fly,Plyometric jump training,159
+495,push up,Functional strength exercises,104
+496,back row,Powerlifting technique practice,224
+497,leg curl,Full-body strength workout,191
+498,leg raise,Explosive power training,235
+499,bench dip,Cycling endurance session,299

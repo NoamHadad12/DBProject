@@ -1,0 +1,122 @@
+-- שאילתות SELECT מתקדמות
+
+-- 1. תרגילים עם ציוד שנקנה אחרי 2024, כולל שם תוכנית האימונים בה הם מופיעים
+SELECT ExName, EqName, ProgramName, PurchaseDate
+FROM Exercise
+NATURAL JOIN Equipment
+NATURAL JOIN TrainingProgram
+WHERE EXTRACT(YEAR FROM PurchaseDate) > 2024;
+
+-- 2. מתאמנים שהצטרפו לתוכנית שהתחילה ב־2023 וציוד בשימוש בתרגילים של אותה תוכנית
+SELECT FirstName, LastName, ProgramName, StartDate, EqName
+FROM Trainee
+NATURAL JOIN TrainingProgram
+NATURAL JOIN Exercise
+NATURAL JOIN Equipment
+WHERE EXTRACT(YEAR FROM StartDate) = 2023;
+
+-- 3. מתאמנים שביצעו אימון של יותר מ־180 דקות, כולל פרטי תוכנית, מאמן ותאריך התחלה
+SELECT FirstName, LastName, Duration, ProgramName, HireDate
+FROM Trainee
+NATURAL JOIN TrainingLog
+NATURAL JOIN TrainingProgram
+NATURAL JOIN Trainer
+WHERE Duration > 180
+ORDER BY Duration DESC;
+
+-- 4. תוכניות אימון שנמשכות פחות מ־365 יום כולל מספר תרגילים שנכללים בהן
+SELECT ProgramName, StartDate, EndDate, COUNT(ExerciseID) AS NumExercises, EndDate - StartDate AS DurationDays
+FROM TrainingProgram
+NATURAL JOIN Exercise
+GROUP BY ProgramName, StartDate, EndDate
+HAVING EndDate - StartDate < 365;
+
+-- 5. ממוצע זמן אימון לפי מתאמן (רק מתאמנים עם ממוצע מתחת ל-45 דקות), כולל מספר אימונים והפרש בין תאריך ההצטרפות לאימון האחרון
+SELECT TraineeID, FirstName, LastName, COUNT(LogID) AS NumLogs, AVG(Duration) AS AvgDuration,
+       MAX(StartDate) - MIN(StartDate) AS TotalDaysInTraining
+FROM Trainee
+NATURAL JOIN TrainingLog
+NATURAL JOIN TrainingProgram
+GROUP BY TraineeID, FirstName, LastName
+HAVING AVG(Duration) < 45
+ORDER BY AvgDuration DESC;
+
+-- 6. תרגילים עם תיאור ארוך מ־30 תווים, כולל שם התוכנית והאם התרגיל דורש ציוד
+SELECT ExName, Description, ProgramName,
+       CASE WHEN EquipmentID IS NOT NULL THEN 'Yes' ELSE 'No' END AS RequiresEquipment
+FROM Exercise
+NATURAL JOIN TrainingProgram
+LEFT JOIN Equipment USING (ExerciseID)
+WHERE LENGTH(Description) > 30;
+
+-- 7. ציוד במצב "זקוק לתחזוקה" שנמצא בשימוש בתרגילים שמופיעים בתוכניות פעילות היום
+SELECT EqName, ConditionStatus, ProgramName, PurchaseDate
+FROM Equipment
+NATURAL JOIN Exercise
+NATURAL JOIN TrainingProgram
+WHERE ConditionStatus = 'Needs maintenance'
+  AND CURRENT_DATE BETWEEN StartDate AND EndDate;
+
+-- 8. תוכניות אימון עם יותר מ־2 מתאמנים ונמשך בהן אימון כלשהו מעל 150 דקות
+SELECT ProgramName, COUNT(DISTINCT TraineeID) AS NumTrainees, MAX(Duration) AS MaxDuration
+FROM TrainingProgram
+NATURAL JOIN Trainee
+NATURAL JOIN TrainingLog
+GROUP BY ProgramName
+HAVING COUNT(DISTINCT TraineeID) > 2 AND MAX(Duration) > 150;
+
+
+-- שאילתות DELETE
+
+-- 1. מחיקת רישומי אימונים שנמשכו פחות מ־10 דקות
+DELETE FROM TrainingLog
+WHERE Duration < 10;
+
+-- 2. מחיקת ציוד שנרכש ב- 2024 והמצב שונה מ-טוב
+DELETE FROM Equipment
+WHERE EXTRACT(YEAR FROM PurchaseDate) = 2024
+  AND conditionstatus != 'good';
+
+
+-- 3.  תוכניות אימון שהסתיימו בשנת 2023 .
+DELETE FROM TrainingProgram
+WHERE EXTRACT(YEAR FROM EndDate) = 2023;
+
+
+
+
+-- שאילתות UPDATE
+
+-- 1. עדכון סטטוס של ציוד למצב "זקוק לתחזוקה" אם נרכש לפני 2024
+UPDATE Equipment
+SET ConditionStatus = 'Needs maintenance'
+WHERE EXTRACT(YEAR FROM PurchaseDate) < 2024;
+
+-- 2. עדכון משך אימון ל־120 דקות למתאמנים שמילאו אימון קצר מ־80 דקות
+UPDATE TrainingLog
+SET Duration = 120
+WHERE Duration < 80;
+
+-- 3. עדכון שם תוכנית לכל התוכניות שהחלו ב־2023 כך שתתחיל ב־"2023 - "
+UPDATE TrainingProgram
+SET ProgramName = '2023 - ' || ProgramName
+WHERE EXTRACT(YEAR FROM StartDate) = 2023;
+
+
+--אילוצים
+
+-- Constraint 1: לא ניתן להזין אימון עם משך שלילי
+ALTER TABLE TrainingLog
+ADD CONSTRAINT chk_duration_positive CHECK (Duration >= 0);
+
+-- Constraint 2: שם ציוד לא יכול להיות ריק
+ALTER TABLE Equipment
+ALTER COLUMN EqName SET NOT NULL;
+
+
+-- Constraint 3: ברירת מחדל למצב ציוד חדש
+ALTER TABLE Equipment
+ALTER COLUMN ConditionStatus TYPE VARCHAR(30),
+ALTER COLUMN ConditionStatus SET DEFAULT 'good';
+
+

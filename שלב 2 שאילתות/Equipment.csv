@@ -1,0 +1,401 @@
+EquipmentID,EqName,PurchaseDate,ConditionStatus,ExerciseID
+787,Smith machine,7/8/2024,Good,100
+788,Medicine ball,7/26/2023,Fair,101
+789,Dip station,3/21/2025,Out of order,102
+790,Leg press machine,1/17/2024,Out of order,103
+791,Leg curl machine,3/22/2024,New,104
+792,Kettlebells,8/13/2024,Needs maintenance,105
+793,Lat pulldown machine,11/6/2023,Needs maintenance,106
+794,Chest press machine,11/8/2024,Out of order,107
+795,Dumbbells,10/12/2024,New,108
+796,Elliptical machine,8/31/2023,Needs maintenance,109
+797,Cable crossover machine,1/6/2025,Fair,110
+798,Squat rack,7/7/2024,Fair,111
+799,Elliptical machine,10/17/2023,Good,112
+800,Lat pulldown machine,1/17/2025,Needs maintenance,113
+801,Pull-up bar,2/14/2024,New,114
+802,Leg press machine,1/15/2025,Good,115
+803,Plyo box,11/20/2024,Needs maintenance,116
+804,Dip station,9/5/2023,Out of order,117
+805,Dip station,9/20/2024,Fair,118
+806,Power rack,11/27/2023,Good,119
+807,Smith machine,6/5/2023,Fair,120
+808,Pull-up bar,9/7/2023,Good,121
+809,Battle ropes,12/9/2024,Out of order,122
+810,Smith machine,6/19/2024,Fair,123
+811,Medicine ball,6/18/2023,Good,124
+812,Treadmill,6/6/2023,Fair,125
+813,Lat pulldown machine,1/7/2025,New,126
+814,Elliptical machine,4/13/2023,Good,127
+815,Bench press,3/9/2025,Fair,128
+816,Leg press machine,3/7/2024,New,129
+817,Bench press,11/30/2023,Good,130
+818,Battle ropes,5/20/2023,Out of order,131
+819,Treadmill,1/25/2024,Good,132
+820,Treadmill,5/11/2023,Fair,133
+821,Chest press machine,6/6/2024,Good,134
+822,Stationary bike,11/1/2023,Fair,135
+823,Dip station,12/4/2023,Out of order,136
+824,Rowing machine,10/23/2023,Needs maintenance,137
+825,Medicine ball,7/2/2023,Good,138
+826,Treadmill,6/30/2024,Good,139
+827,Smith machine,6/19/2024,Fair,140
+828,Smith machine,6/17/2024,Fair,141
+829,Medicine ball,6/9/2023,Good,142
+830,Treadmill,1/17/2025,Needs maintenance,143
+831,Bench press,10/3/2023,Out of order,144
+832,Barbells,4/25/2023,Fair,145
+833,TRX suspension trainer,10/20/2023,New,146
+834,Smith machine,7/18/2023,Out of order,147
+835,Leg curl machine,1/13/2024,New,148
+836,Elliptical machine,11/16/2024,Good,149
+837,Dumbbells,6/26/2024,Needs maintenance,150
+838,Medicine ball,1/18/2024,Fair,151
+839,Chest press machine,7/24/2023,New,152
+840,TRX suspension trainer,12/25/2024,New,153
+841,Lat pulldown machine,12/20/2024,Good,154
+842,Resistance bands,4/18/2023,Out of order,155
+843,Battle ropes,6/15/2024,Fair,156
+844,Dumbbells,10/4/2023,New,157
+845,Chest press machine,3/8/2025,Out of order,158
+846,Elliptical machine,3/9/2024,Needs maintenance,159
+847,Leg extension machine,3/22/2025,Good,160
+848,Barbells,6/6/2023,Needs maintenance,161
+849,Elliptical machine,10/7/2023,Out of order,162
+850,Medicine ball,2/18/2024,Needs maintenance,163
+851,Resistance bands,12/18/2024,New,164
+852,Leg curl machine,9/12/2023,Out of order,165
+853,Kettlebells,9/1/2023,Fair,166
+854,Leg press machine,12/24/2024,Fair,167
+855,Dip station,5/1/2024,Out of order,168
+856,Leg press machine,6/15/2023,New,169
+857,Chest press machine,12/17/2024,Needs maintenance,170
+858,Medicine ball,3/27/2024,New,171
+859,Elliptical machine,3/22/2024,Needs maintenance,172
+860,Dumbbells,7/29/2023,New,173
+861,Pull-up bar,8/10/2023,Needs maintenance,174
+862,Leg press machine,10/4/2024,New,175
+863,Barbells,7/28/2023,Out of order,176
+864,Leg extension machine,9/9/2024,Needs maintenance,177
+865,Squat rack,6/16/2023,New,178
+866,Stair climber,9/21/2024,Good,179
+867,TRX suspension trainer,7/21/2024,Fair,180
+868,Resistance bands,9/15/2024,New,181
+869,Cable crossover machine,6/29/2023,Good,182
+870,Lat pulldown machine,5/1/2024,New,183
+871,Dumbbells,5/7/2024,Fair,184
+872,Stair climber,5/17/2024,Needs maintenance,185
+873,Leg extension machine,10/17/2023,Out of order,186
+874,Resistance bands,5/15/2024,Fair,187
+875,Dip station,3/2/2025,Fair,188
+876,Elliptical machine,7/10/2024,Needs maintenance,189
+877,Chest press machine,7/26/2023,Fair,190
+878,Kettlebells,3/19/2025,Needs maintenance,191
+879,Bench press,9/12/2023,New,192
+880,Lat pulldown machine,4/3/2023,Good,193
+881,Kettlebells,5/6/2024,Out of order,194
+882,TRX suspension trainer,6/16/2023,Out of order,195
+883,Resistance bands,5/14/2024,Fair,196
+884,Dumbbells,9/22/2023,New,197
+885,Power rack,7/20/2024,Fair,198
+886,TRX suspension trainer,1/20/2025,New,199
+887,Dumbbells,1/4/2025,Out of order,200
+888,Lat pulldown machine,6/23/2023,Needs maintenance,201
+889,Pull-up bar,8/13/2023,New,202
+890,Resistance bands,1/27/2025,New,203
+891,TRX suspension trainer,6/6/2024,Good,204
+892,Lat pulldown machine,10/14/2024,Fair,205
+893,Bench press,4/25/2024,Fair,206
+894,Plyo box,1/26/2024,New,207
+895,Cable crossover machine,9/17/2024,Good,208
+896,Cable crossover machine,2/29/2024,Needs maintenance,209
+897,Elliptical machine,9/13/2024,Needs maintenance,210
+898,Bench press,7/4/2023,New,211
+899,Chest press machine,2/24/2024,Out of order,212
+900,Smith machine,12/16/2024,New,213
+901,Medicine ball,5/26/2024,Out of order,214
+902,Dip station,4/26/2023,Good,215
+903,Treadmill,5/16/2023,Needs maintenance,216
+904,Leg extension machine,3/24/2024,Out of order,217
+905,Chest press machine,4/29/2023,Good,218
+906,Plyo box,1/17/2025,Out of order,219
+907,Medicine ball,9/21/2024,Fair,220
+908,Leg curl machine,1/26/2025,New,221
+909,TRX suspension trainer,10/20/2024,Needs maintenance,222
+910,Elliptical machine,9/24/2023,Fair,223
+911,Smith machine,5/5/2023,Fair,224
+912,Dip station,3/1/2025,Needs maintenance,225
+913,Squat rack,4/30/2024,Needs maintenance,226
+914,Squat rack,2/10/2025,Fair,227
+915,Chest press machine,10/13/2023,New,228
+916,Squat rack,5/25/2024,Needs maintenance,229
+917,Lat pulldown machine,8/4/2024,Good,230
+918,Power rack,4/1/2024,Needs maintenance,231
+919,Cable crossover machine,1/5/2024,New,232
+920,Resistance bands,1/29/2025,New,233
+921,Resistance bands,2/19/2025,Good,234
+922,Battle ropes,11/14/2023,Needs maintenance,235
+923,Squat rack,1/31/2025,New,236
+924,Plyo box,8/18/2024,Needs maintenance,237
+925,Leg press machine,4/18/2023,Good,238
+926,Elliptical machine,8/9/2024,Out of order,239
+927,Leg press machine,2/15/2024,New,240
+928,Dip station,8/10/2024,Needs maintenance,241
+929,Elliptical machine,12/5/2024,Good,242
+930,Treadmill,10/6/2023,Needs maintenance,243
+931,Resistance bands,4/28/2023,Needs maintenance,244
+932,Elliptical machine,1/30/2025,New,245
+933,Dumbbells,9/12/2023,New,246
+934,Lat pulldown machine,8/3/2024,New,247
+935,Plyo box,9/23/2023,Good,248
+936,Power rack,6/5/2023,Needs maintenance,249
+937,Leg extension machine,9/6/2023,Good,250
+938,Bench press,1/20/2024,Good,251
+939,Lat pulldown machine,6/25/2023,Fair,252
+940,Lat pulldown machine,8/3/2023,Fair,253
+941,Dip station,3/17/2024,New,254
+942,Cable crossover machine,6/19/2023,Needs maintenance,255
+943,Dip station,8/2/2024,Good,256
+944,Bench press,1/2/2024,Good,257
+945,Dip station,10/18/2024,Good,258
+946,Squat rack,4/15/2023,Fair,259
+947,Cable crossover machine,4/9/2024,New,260
+948,Resistance bands,7/7/2024,Needs maintenance,261
+949,Medicine ball,9/27/2024,Out of order,262
+950,Leg extension machine,5/23/2024,New,263
+951,Barbells,3/14/2025,New,264
+952,Rowing machine,5/20/2023,New,265
+953,Smith machine,5/5/2023,New,266
+954,Squat rack,4/18/2024,Good,267
+955,Cable crossover machine,10/14/2023,Fair,268
+956,Leg extension machine,5/1/2024,Needs maintenance,269
+957,Leg press machine,10/7/2023,Out of order,270
+958,Smith machine,5/13/2024,Needs maintenance,271
+959,Bench press,8/26/2024,Out of order,272
+960,Battle ropes,4/17/2023,Good,273
+961,Barbells,11/22/2023,Needs maintenance,274
+962,Leg curl machine,11/30/2023,Needs maintenance,275
+963,Battle ropes,5/29/2023,Out of order,276
+964,Smith machine,3/13/2024,Needs maintenance,277
+965,Cable crossover machine,3/30/2024,Needs maintenance,278
+966,Treadmill,1/13/2025,New,279
+967,Battle ropes,1/2/2025,New,280
+968,Smith machine,12/11/2024,Needs maintenance,281
+969,Stair climber,12/18/2023,Out of order,282
+970,Plyo box,6/18/2023,Needs maintenance,283
+971,Leg curl machine,2/8/2024,Good,284
+972,Chest press machine,10/2/2023,Fair,285
+973,Pull-up bar,12/14/2024,Fair,286
+974,Treadmill,3/5/2024,Out of order,287
+975,Medicine ball,3/26/2024,Needs maintenance,288
+976,Battle ropes,12/4/2023,New,289
+977,Elliptical machine,3/28/2025,New,290
+978,Battle ropes,10/18/2023,New,291
+979,Dip station,3/8/2025,Fair,292
+980,Leg extension machine,8/2/2024,Good,293
+981,Stair climber,11/21/2024,Good,294
+982,Smith machine,3/3/2024,Good,295
+983,Kettlebells,1/23/2025,New,296
+984,Medicine ball,2/10/2025,Fair,297
+985,Pull-up bar,8/10/2024,New,298
+986,Treadmill,1/12/2024,Out of order,299
+987,Battle ropes,11/22/2024,Fair,300
+988,TRX suspension trainer,12/14/2024,Out of order,301
+989,Treadmill,2/23/2024,Good,302
+990,Medicine ball,12/12/2024,Out of order,303
+991,Pull-up bar,4/10/2024,Out of order,304
+992,Barbells,6/27/2024,Out of order,305
+993,Kettlebells,1/18/2024,New,306
+994,Leg extension machine,8/8/2024,Out of order,307
+995,Plyo box,3/8/2025,Out of order,308
+996,Battle ropes,7/8/2023,Fair,309
+997,Elliptical machine,5/13/2024,Good,310
+998,Leg extension machine,2/14/2024,Out of order,311
+999,Smith machine,11/8/2023,Needs maintenance,312
+399,Battle ropes,7/20/2024,Good,313
+400,Kettlebells,1/19/2024,Out of order,314
+401,Stair climber,1/13/2024,Fair,315
+402,Leg extension machine,8/11/2023,Out of order,316
+403,Dumbbells,7/16/2023,Needs maintenance,317
+404,Rowing machine,3/13/2024,Good,318
+405,Squat rack,8/27/2024,New,319
+406,Plyo box,7/10/2024,Out of order,320
+407,Rowing machine,11/17/2024,Fair,321
+408,Lat pulldown machine,4/1/2024,New,322
+409,Stationary bike,5/19/2023,Needs maintenance,323
+410,Bench press,10/16/2023,Needs maintenance,324
+411,TRX suspension trainer,2/26/2024,Fair,325
+412,Barbells,1/1/2025,Out of order,326
+413,Lat pulldown machine,10/16/2024,Fair,327
+414,Pull-up bar,4/6/2024,Good,328
+415,Power rack,11/22/2023,Good,329
+416,Kettlebells,5/21/2024,Fair,330
+417,Squat rack,2/15/2025,Good,331
+418,TRX suspension trainer,4/29/2024,Needs maintenance,332
+419,Resistance bands,6/30/2024,Fair,333
+420,Treadmill,2/13/2024,Fair,334
+421,Leg press machine,7/10/2023,Fair,335
+422,Cable crossover machine,9/23/2024,Out of order,336
+423,Battle ropes,10/23/2023,Out of order,337
+424,Chest press machine,5/7/2023,Out of order,338
+425,Chest press machine,7/23/2023,Fair,339
+426,Treadmill,10/6/2024,Needs maintenance,340
+427,Resistance bands,11/24/2023,Needs maintenance,341
+428,Medicine ball,8/8/2023,Fair,342
+429,TRX suspension trainer,8/7/2023,Good,343
+430,Plyo box,3/28/2024,Good,344
+431,Barbells,2/4/2024,Out of order,345
+432,Leg press machine,11/24/2024,Needs maintenance,346
+433,Leg extension machine,1/2/2025,Fair,347
+434,Stationary bike,3/23/2024,Out of order,348
+435,Dumbbells,12/20/2023,Good,349
+436,Leg curl machine,10/17/2024,Needs maintenance,350
+437,Cable crossover machine,7/7/2023,Out of order,351
+438,Resistance bands,3/20/2025,Fair,352
+439,Leg curl machine,6/18/2024,Good,353
+440,Medicine ball,5/2/2023,Good,354
+441,Rowing machine,9/16/2023,New,355
+442,Cable crossover machine,8/22/2024,Out of order,356
+443,Rowing machine,3/15/2024,Good,357
+444,Elliptical machine,4/7/2023,Good,358
+445,Medicine ball,5/7/2024,Needs maintenance,359
+446,Bench press,5/28/2023,Needs maintenance,360
+447,Dumbbells,12/14/2024,Fair,361
+448,Leg extension machine,8/15/2023,Good,362
+449,Dip station,7/21/2023,Fair,363
+450,Stair climber,4/14/2024,Needs maintenance,364
+451,Cable crossover machine,3/29/2025,Fair,365
+452,Rowing machine,2/14/2025,Out of order,366
+453,Stationary bike,2/23/2024,New,367
+454,Squat rack,10/24/2023,New,368
+455,Stair climber,2/23/2025,Out of order,369
+456,Medicine ball,10/2/2023,Out of order,370
+457,Treadmill,7/26/2024,New,371
+458,Dip station,10/4/2024,Out of order,372
+459,Squat rack,11/8/2023,Out of order,373
+460,Kettlebells,3/15/2024,New,374
+461,Stair climber,1/5/2024,Good,375
+462,Chest press machine,9/17/2024,Fair,376
+463,Plyo box,2/8/2024,Good,377
+464,TRX suspension trainer,8/12/2023,Out of order,378
+465,Treadmill,2/14/2024,New,379
+466,Power rack,4/6/2023,Good,380
+467,Squat rack,7/31/2023,Good,381
+468,Lat pulldown machine,3/16/2024,Good,382
+469,Squat rack,7/17/2024,Fair,383
+470,Chest press machine,7/7/2024,Good,384
+471,Pull-up bar,9/3/2024,Needs maintenance,385
+472,Treadmill,10/21/2023,Fair,386
+473,Barbells,7/13/2024,Needs maintenance,387
+474,Treadmill,2/27/2024,Fair,388
+475,Stationary bike,10/27/2024,New,389
+476,Dumbbells,7/3/2023,Needs maintenance,390
+477,Pull-up bar,6/1/2024,New,391
+478,Bench press,9/1/2023,New,392
+479,Battle ropes,11/7/2024,Fair,393
+480,Squat rack,9/7/2024,New,394
+481,Chest press machine,6/21/2024,New,395
+482,TRX suspension trainer,2/23/2024,Out of order,396
+483,Medicine ball,2/8/2024,Out of order,397
+484,Elliptical machine,11/22/2024,Fair,398
+485,Rowing machine,1/30/2025,Needs maintenance,399
+486,Medicine ball,5/1/2023,Out of order,400
+487,Plyo box,5/18/2024,Out of order,401
+488,Bench press,1/25/2024,Needs maintenance,402
+489,Power rack,6/22/2024,New,403
+490,Medicine ball,7/22/2024,Out of order,404
+491,Dumbbells,9/7/2023,Good,405
+492,Leg extension machine,6/26/2024,New,406
+493,Battle ropes,4/1/2024,Good,407
+494,Barbells,11/3/2024,Good,408
+495,Pull-up bar,3/8/2025,Fair,409
+496,Battle ropes,1/6/2024,Out of order,410
+497,Pull-up bar,5/29/2023,Fair,411
+498,Power rack,4/6/2023,New,412
+499,Barbells,4/9/2024,Out of order,413
+500,Pull-up bar,1/1/2025,Needs maintenance,414
+501,Stair climber,6/26/2024,New,415
+502,Smith machine,2/17/2024,Fair,416
+503,Smith machine,11/23/2023,Out of order,417
+504,TRX suspension trainer,6/29/2023,New,418
+505,Lat pulldown machine,8/15/2024,Needs maintenance,419
+506,Power rack,10/30/2023,Good,420
+507,Cable crossover machine,5/31/2023,Out of order,421
+508,Elliptical machine,9/20/2024,Fair,422
+509,Dip station,10/3/2023,Out of order,423
+510,Battle ropes,4/21/2024,Fair,424
+511,Resistance bands,10/22/2023,Fair,425
+512,Stair climber,9/5/2023,Good,426
+513,Elliptical machine,12/27/2023,Needs maintenance,427
+514,Barbells,2/24/2025,Good,428
+515,Barbells,1/23/2025,Fair,429
+516,Smith machine,5/5/2024,Fair,430
+517,Leg curl machine,4/5/2024,Needs maintenance,431
+518,Dumbbells,8/31/2023,Fair,432
+519,Rowing machine,8/2/2023,Good,433
+520,Smith machine,10/18/2024,Fair,434
+521,Lat pulldown machine,11/29/2024,Good,435
+522,Cable crossover machine,7/4/2023,New,436
+523,Lat pulldown machine,4/1/2023,Out of order,437
+524,Lat pulldown machine,5/5/2023,Fair,438
+525,Squat rack,7/31/2024,Fair,439
+526,Stair climber,7/28/2023,Needs maintenance,440
+527,Plyo box,12/26/2024,Fair,441
+528,Plyo box,12/1/2024,Needs maintenance,442
+529,Squat rack,12/1/2023,New,443
+530,Power rack,1/20/2025,Out of order,444
+531,Leg press machine,2/27/2024,Good,445
+532,Battle ropes,5/22/2023,Needs maintenance,446
+533,Treadmill,4/19/2024,Good,447
+534,Cable crossover machine,3/15/2024,New,448
+535,Leg press machine,6/21/2024,Fair,449
+536,Medicine ball,9/25/2024,Fair,450
+537,Power rack,4/14/2023,Needs maintenance,451
+538,Medicine ball,5/26/2024,Out of order,452
+539,Stair climber,4/23/2023,New,453
+540,Resistance bands,4/27/2023,Good,454
+541,Lat pulldown machine,1/7/2025,Good,455
+542,Battle ropes,12/11/2024,Fair,456
+543,Leg press machine,12/14/2024,New,457
+544,Dip station,6/8/2023,Needs maintenance,458
+545,Leg press machine,5/29/2024,New,459
+546,Stationary bike,9/17/2023,Fair,460
+547,Resistance bands,10/14/2024,Fair,461
+548,Bench press,11/22/2024,Good,462
+549,Lat pulldown machine,1/29/2025,New,463
+550,Leg press machine,3/29/2025,Good,464
+551,Pull-up bar,1/4/2024,Needs maintenance,465
+552,Power rack,4/16/2023,New,466
+553,Medicine ball,1/7/2025,Needs maintenance,467
+554,Dip station,12/2/2023,Needs maintenance,468
+555,Plyo box,12/12/2024,New,469
+556,Smith machine,5/22/2024,Good,470
+557,Leg curl machine,9/14/2023,Fair,471
+558,Kettlebells,9/27/2024,Good,472
+559,Resistance bands,9/23/2024,Out of order,473
+560,Lat pulldown machine,2/25/2025,Good,474
+561,Plyo box,1/30/2025,Fair,475
+562,Stationary bike,10/21/2023,Good,476
+563,Squat rack,1/2/2024,Good,477
+564,Barbells,10/8/2024,Good,478
+565,Bench press,10/18/2023,Needs maintenance,479
+566,Power rack,1/17/2024,Needs maintenance,480
+567,Pull-up bar,6/6/2023,Needs maintenance,481
+568,Chest press machine,3/26/2025,Good,482
+569,Stair climber,7/17/2023,Out of order,483
+570,Stair climber,1/22/2025,Out of order,484
+571,Bench press,3/7/2025,Out of order,485
+572,Dip station,8/22/2024,Good,486
+573,Kettlebells,9/1/2024,Good,487
+574,Treadmill,7/28/2023,Out of order,488
+575,TRX suspension trainer,9/11/2024,New,489
+576,Elliptical machine,4/15/2023,Good,490
+577,Barbells,1/22/2025,Fair,491
+578,Leg extension machine,8/12/2023,Out of order,492
+579,Leg curl machine,1/10/2025,New,493
+580,TRX suspension trainer,3/7/2024,Fair,494
+581,Cable crossover machine,9/3/2024,New,495
+582,Resistance bands,9/12/2024,New,496
+583,Power rack,2/21/2025,Out of order,497
+584,Lat pulldown machine,11/4/2023,Fair,498
+585,Stair climber,10/7/2023,Out of order,499

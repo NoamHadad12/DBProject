@@ -1,0 +1,84 @@
+import psycopg2
+import csv
+
+# פרטי החיבור למסד הנתונים
+DB_NAME = "my_dbdata"
+DB_USER = "omer"
+DB_PASSWORD = "gerbil"
+DB_HOST = "localhost"
+DB_PORT = "5432"
+
+# חיבור למסד הנתונים
+conn = psycopg2.connect(
+    dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port=DB_PORT
+)
+cursor = conn.cursor()
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור TrainingProgram
+with open("training_program.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO TrainingProgram (ProgramID, Name, StartDate, EndDate, TrainerID) VALUES (%s, %s, %s, %s, %s)",
+            row,
+        )
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור Trainee
+with open("trainee.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO Trainee (TraineeID, Name, DateOfBirth, Email, Phone, RegistrationDate) VALUES (%s, %s, %s, %s, %s, %s)",
+            row,
+        )
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור Trainer
+with open("trainer.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO Trainer (TrainerID, Name, Specialization, Phone, HireDate) VALUES (%s, %s, %s, %s, %s)",
+            row,
+        )
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור TraineeProgram
+with open("trainee_program.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO TraineeProgram (TraineeID, ProgramID, EnrollmentDate) VALUES (%s, %s, %s)",
+            row,
+        )
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור Equipment
+with open("equipment.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO Equipment (EquipmentID, Name, PurchaseDate, ConditionStatus, ProgramID) VALUES (%s, %s, %s, %s, %s)",
+            row,
+        )
+
+# קריאת הנתונים מה-CSV והכנסתם למסד הנתונים עבור Exercise
+with open("exercise.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  # דילוג על כותרות
+    for row in reader:
+        cursor.execute(
+            "INSERT INTO Exercise (ExerciseID, Name, Description, EquipmentID, ProgramID) VALUES (%s, %s, %s, %s, %s)",
+            row,
+        )
+
+# שמירת השינויים במסד הנתונים
+conn.commit()
+
+# סגירת החיבור
+cursor.close()
+conn.close()
+
+print("✅ הנתונים הוזנו בהצלחה!")
