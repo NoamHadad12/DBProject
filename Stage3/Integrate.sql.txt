@@ -1,0 +1,45 @@
+-- שינוי שם הטבלה מ-trainee ל-member
+ALTER TABLE trainee RENAME TO member;
+
+-- שינוי שם העמודה מ-traineeid ל-memberid
+ALTER TABLE member RENAME COLUMN traineeid TO memberid;
+
+
+-- שינוי שם העמודה בטבלת trainer
+ALTER TABLE trainer RENAME COLUMN trainerid TO memberid;
+
+-- שינוי שם העמודה בטבלת traininglog
+ALTER TABLE traininglog RENAME COLUMN traineeid TO memberid;
+
+-- מחיקת מפתח זר ישן אם קיים
+ALTER TABLE traininglog DROP CONSTRAINT IF EXISTS traininglog_traineeid_fkey;
+
+-- הוספת מפתח זר חדש
+ALTER TABLE traininglog ADD CONSTRAINT traininglog_memberid_fkey
+FOREIGN KEY (memberid) REFERENCES member(memberid);
+
+
+
+טבלאות חדשות
+
+-- ישות תשלום (Payment)
+CREATE TABLE Payment (
+    paymentID INT PRIMARY KEY,
+    amount NUMERIC,
+    paymentDate DATE
+);
+
+-- ישות שיעור (Classes)
+CREATE TABLE Classes (
+    classID INT PRIMARY KEY,
+    className VARCHAR(100),
+    schedule VARCHAR(100)
+);
+
+-- ישות מנוי (Membership)
+CREATE TABLE Membership (
+    membershipID INT PRIMARY KEY,
+    membershipType VARCHAR(100),
+    startDate DATE,
+    endDate DATE
+);

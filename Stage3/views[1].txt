@@ -1,0 +1,49 @@
+
+//old view of our prog
+CREATE VIEW OldDept_View AS
+SELECT 
+    M.TrineerID AS MemberID,
+    M.FirstName,
+    M.LastName,
+    TP.ProgramID,
+    TP.Pro_Name AS ProgramName,
+    E.ExerciseID,
+    E.Ex_Name AS ExerciseName
+FROM Members M
+JOIN TrainingProgram TP ON M.LogID = TP.LogID
+JOIN Exercise E ON E.ProgramID = TP.ProgramID;
+
+
+//query 1 of our prog
+SELECT MemberID, FirstName, LastName, ProgramName, ExerciseName
+FROM OldDept_View
+ORDER BY LastName, FirstName;
+
+
+//query 2 of our prog
+SELECT DISTINCT ExerciseName
+FROM OldDept_View
+WHERE ProgramID = 5;
+
+
+//old view of partners prog
+CREATE VIEW vw_MemberPayments AS
+SELECT m.MembersID, m.FirstName, m.LastName, p.PaymentID, p.Amount, p.PaymentDate
+FROM Members m
+JOIN pay mp ON m.MembersID = mp.MembersID
+JOIN Payments p ON mp.PaymentID = p.PaymentID
+
+
+
+//query 1 of partners prog
+SELECT * FROM vw_MemberPayments ORDER BY PaymentDate DESC FETCH FIRST 10 ROWS ONLY
+
+
+//query 2 of partners prog
+SELECT MembersID, FirstName, LastName, SUM(Amount_) AS TotalPayments
+FROM vw_MemberPayments
+GROUP BY MembersID, FirstName, LastName
+
+
+
+
