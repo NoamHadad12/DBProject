@@ -1,0 +1,25 @@
+---First Main Test
+
+DO $$
+DECLARE
+    member_id INT := 803298715;  -- ניתן להחלפה לפי הצורך
+    training_active BOOLEAN;
+BEGIN
+    -- Call function to check if member is currently enrolled in a valid training
+    training_active := is_member_enrolled_active(member_id);
+
+    IF training_active THEN
+        RAISE NOTICE 'Member % is actively enrolled in a training program.', member_id;
+    ELSE
+        RAISE NOTICE 'Member % is NOT enrolled in a valid training program.', member_id;
+    END IF;
+
+    -- Call procedure to update payment status for all members
+    CALL update_payment_status();
+
+    RAISE NOTICE 'Payment status updated successfully.';
+    
+EXCEPTION WHEN OTHERS THEN
+    RAISE WARNING 'Error in main procedure 1: %', SQLERRM;
+END;
+$$;

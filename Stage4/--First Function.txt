@@ -1,0 +1,65 @@
+--First Function
+--מצב תוכנית האימון העדכנית, סטטוס פעילות, התוכנית, זמן שנותר והודעת סטטוס מתומצתת
+
+CREATE OR REPLACE FUNCTION check_member_training_status(
+    p_memberid INT
+) RETURNS TABLE (
+    is_active BOOLEAN,        -- Whether the program is currently active (true/false)
+    program_name VARCHAR(50), -- Name of the training program
+    days_remaining INT,       -- Days until program ends (negative if expired)
+    status_message TEXT      -- Human-readable status description
+) AS $$
+/*
+* Enhanced member training status checker
+* Purpose: Provides comprehensive training program status without throwing errors
+* Returns: Multiple status fields for better frontend handling
+*/
+BEGIN
+    -- Primary query that fetches the most recent training program
+    RETURN QUERY
+    SELECT
+        -- Determine if program is active (end date in future)
+        CASE 
+            WHEN tp.enddate >= CURRENT_DATE THEN TRUE
+            ELSE FALSE
+        END AS is_active,
+        
+        -- Program details
+        tp.programname AS program_name,
+        
+        -- Calculate days remaining (positive) or days expired (negative)
+        (tp.enddate - CURRENT_DATE) AS days_remaining,
+        
+        -- Generate friendly status message
+        CASE
+            WHEN tp.enddate IS NULL THEN 'No training program found'
+            WHEN tp.enddate >= CURRENT_DATE THEN 
+                'Active program - ends in ' || (tp.enddate - CURRENT_DATE) || ' days'
+            ELSE 
+                'Program expired ' || (CURRENT_DATE - tp.enddate) || ' days ago'
+        END AS status_message
+    
+    FROM 
+        trainingprogram tp
+    WHERE 
+        tp.memberid = p_memberid
+    ORDER BY 
+        -- Get the most recent program first (by end date)
+        tp.enddate DESC
+    LIMIT 1; -- Return only the latest program
+
+    -- Fallback when no programs exist for member
+    IF NOT FOUND THEN
+        RETURN QUERY SELECT 
+            FALSE,                   -- is_active
+            NULL::VARCHAR(50),       -- program_name (cast as varchar)
+            NULL::INT,              -- days_remaining
+            'Member has no training programs'::TEXT;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+-- Example call to the function:
+SELECT * FROM check_member_training_status(488283920);

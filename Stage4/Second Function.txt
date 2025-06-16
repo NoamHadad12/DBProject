@@ -1,0 +1,37 @@
+--Second Function
+--בודק שהתאריך סיום של החבר לא עבר את התאריך סיום של היום
+
+CREATE OR REPLACE FUNCTION is_member_enrolled_active(
+    p_memberid INT
+) RETURNS BOOLEAN AS
+$$
+DECLARE
+    enrolled_count INT;           -- Variable to store the count of active enrollments
+    current_date DATE := CURRENT_DATE;  -- Get the current date
+    member_exists INT;            -- Variable to check if member exists in the member table
+BEGIN
+    -- Check if the member exists in the member table
+    SELECT COUNT(*) INTO member_exists FROM member WHERE memberid = p_memberid;
+    IF member_exists = 0 THEN
+        -- Raise an exception if the member does not exist
+        RAISE EXCEPTION 'Member ID % does not exist in the system.\n', p_memberid;
+    END IF;
+
+    -- Count the number of active training programs where enddate is today or in the future
+    SELECT COUNT(*) INTO enrolled_count
+    FROM trainingprogram
+    WHERE memberid = p_memberid
+      AND enddate >= current_date;
+
+    -- Return TRUE if enrolled_count is greater than 0, FALSE otherwise
+    RETURN enrolled_count > 0;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        -- Raise a generic exception with the error message if something goes wrong
+        RAISE EXCEPTION 'An error occurred while checking training program enrollment: %', SQLERRM;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Example call to the function:
+SELECT is_member_enrolled_active(803298715);

@@ -1,0 +1,26 @@
+--First Trigger
+
+-- 1. Trigger function that updates the payment_status field based on paymentdate
+CREATE OR REPLACE FUNCTION update_payment_status_trigger_fn()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Check if the new paymentdate value is NOT NULL
+    IF NEW.paymentdate IS NOT NULL THEN
+        -- If paymentdate exists, set payment_status to 'No Debt'
+        NEW.payment_status := 'No Debt';
+    ELSE
+        -- If paymentdate is NULL, set payment_status to 'Debt Pending'
+        NEW.payment_status := 'Debt Pending';
+    END IF;
+
+    -- Return the modified NEW row to be used in the triggering event
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Example update: set paymentdate to current date for payment with id 305
+UPDATE payment SET paymentdate = CURRENT_DATE WHERE paymentid = 305;
+
+-- Select all rows from payment table to verify changes
+SELECT *
+FROM payment;

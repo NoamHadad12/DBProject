@@ -1,0 +1,23 @@
+---Second Main Test
+
+DO $$
+DECLARE
+    member_id INT := 488283920; -- לשנות לפי מספר מתאמן
+    training_status RECORD;
+BEGIN
+    -- Call function that returns multiple fields about training status
+    SELECT * INTO training_status
+    FROM check_member_training_status(member_id);
+
+    -- הצגת המידע למשתמש
+    RAISE NOTICE 'Training Program Status: %', training_status.status_message;
+
+    -- Call procedure to update membership level according to training data
+    CALL update_membership_level(6);  -- לדוגמה: 6 חודשים אחורה
+
+    RAISE NOTICE 'Membership levels updated successfully.';
+
+EXCEPTION WHEN OTHERS THEN
+    RAISE WARNING 'Error in main procedure 2: %', SQLERRM;
+END;
+$$;

@@ -1,0 +1,42 @@
+CREATE OR REPLACE PROCEDURE update_payment_status()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    rec RECORD;
+    pay_date DATE;
+BEGIN
+    FOR rec IN SELECT paymentid, memberid FROM payment
+    LOOP
+        BEGIN
+            -- בודק אם יש תאריך תשלום לא NULL עבור אותו memberid
+            SELECT paymentdate INTO pay_date
+            FROM payment
+            WHERE memberid = rec.memberid AND paymentdate IS NOT NULL
+            LIMIT 1;
+
+            IF pay_date IS NOT NULL THEN
+                UPDATE payment
+                SET payment_status = 'No Debt'
+                WHERE paymentid = rec.paymentid;
+            ELSE
+                UPDATE payment
+                SET payment_status = 'Debt Pending'
+                WHERE paymentid = rec.paymentid;
+            END IF;
+
+        EXCEPTION WHEN NO_DATA_FOUND THEN
+            UPDATE payment
+            SET payment_status = 'Debt Pending'
+            WHERE paymentid = rec.paymentid;
+        WHEN OTHERS THEN
+            RAISE NOTICE 'Error updating paymentid %: %', rec.paymentid, SQLERRM;
+        END;
+    END LOOP;
+END;
+$$;
+
+CALL update_payment_status();
+
+
+SELECT *
+FROM payment;

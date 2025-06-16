@@ -1,0 +1,88 @@
+CREATE OR REPLACE PROCEDURE public.update_membership_level(p_months INT)
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    rec RECORD;               -- Temporary record for looping through members
+    training_count INT;       -- Number of trainings for the specific member
+    membership_duration INT;  -- Duration of the membership in months
+    new_level VARCHAR(20);    -- New membership level to be assigned
+BEGIN
+    -- Loop through all members and their memberships
+    FOR rec IN
+        SELECT m.memberid, ms.membershipid, ms.startdate, ms.enddate
+        FROM member m
+        JOIN membership ms ON ms.memberid = m.memberid
+    LOOP
+        -- Count trainings done by the member in the past p_months
+        -- Also join with trainingprogram to ensure the program is still valid (enddate within range)
+        SELECT COUNT(*) INTO training_count
+        FROM traininglog tl
+        JOIN trainingprogram tp ON tl.programid = tp.programid
+        WHERE tl.traineeid = rec.memberid
+          AND tp.enddate >= CURRENT_DATE - (p_months || ' months')::interval;
+
+        -- Calculate the membership duration in months
+        membership_duration := EXTRACT(MONTH FROM age(rec.enddate, rec.startdate)) + 
+                               EXTRACT(YEAR FROM age(rec.enddate, rec.startdate)) * 12;
+
+        -- Determine new membership level based on duration and training count
+        IF membership_duration < 3 THEN
+            new_level := 'Bronze';  -- Short-term or new membership
+        ELSIF membership_duration < 6 THEN
+            IF training_count < 10 THEN
+                new_level := 'Bronze';
+            ELSE
+                new_level := 'Silver';
+            END IF;
+        ELSIF membership_duration < 12 THEN
+            IF training_count < 20 THEN
+                new_level := 'Silver';
+            ELSE
+                new_level := 'Gold';
+            END IF;
+        ELSIF membership_duration < 18 THEN
+            IF training_count < 30 THEN
+                new_level := 'Gold';
+            ELSE
+                new_level := 'Platinum';
+            END IF;
+        ELSIF membership_duration < 24 THEN
+            IF training_count < 40 THEN
+                new_level := 'Platinum';
+            ELSE
+                new_level := 'Diamond';
+            END IF;
+        ELSIF membership_duration < 36 THEN
+            IF training_count < 50 THEN
+                new_level := 'Diamond';
+            ELSE
+                new_level := 'Elite';
+            END IF;
+        ELSIF membership_duration < 48 THEN
+            IF training_count < 60 THEN
+                new_level := 'Elite';
+            ELSE
+                new_level := 'Master';
+            END IF;
+        ELSE
+            IF training_count < 70 THEN
+                new_level := 'Master';
+            ELSE
+                new_level := 'Legend';
+            END IF;
+        END IF;
+
+        -- Update the membership type in the membership table
+        UPDATE membership
+        SET membershiptype = new_level
+        WHERE membershipid = rec.membershipid;
+
+        -- Log a notice with the update information
+        RAISE NOTICE 'Member % membership updated to %', rec.memberid, new_level;
+    END LOOP;
+
+EXCEPTION WHEN OTHERS THEN
+    -- In case of any error, raise a warning with the error message
+    RAISE WARNING 'Error in update_membership_level: %', SQLERRM;
+END;
+$$;
