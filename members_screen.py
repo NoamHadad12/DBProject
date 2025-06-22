@@ -69,9 +69,8 @@ def open_members_screen():
             firstname_entry.insert(0, values[1])
             lastname_entry.insert(0, values[2])
             dateofbirth_entry.insert(0, values[3])
-            phone_entry.insert(0, values[5])
-            email_entry.insert(0, values[6])
-
+            phone_entry.insert(0, values[4])  # Changed from 5 to 4
+            email_entry.insert(0, values[5])  # Changed from 6 to 5
     tree.bind("<<TreeviewSelect>>", on_row_select)
 
     # Buttons and functions
@@ -82,10 +81,10 @@ def open_members_screen():
         cur = conn.cursor()
         try:
             cur.execute("""
-                INSERT INTO member (firstname, lastname, dateofbirth, phone, email)
-                VALUES (%s, %s, %s, %s, %s, %s)
-            """, (firstname_entry.get(), lastname_entry.get(), dateofbirth_entry.get(),
-                phone_entry.get(), email_entry.get()))
+                        INSERT INTO member (firstname, lastname, dateofbirth, phone, email)
+                        VALUES (%s, %s, %s, %s, %s)
+                        """, (firstname_entry.get(), lastname_entry.get(), dateofbirth_entry.get(),
+                              phone_entry.get(), email_entry.get()))
             conn.commit()
             messagebox.showinfo("Success", "Member added successfully")
             refresh_tree()
@@ -93,7 +92,6 @@ def open_members_screen():
             messagebox.showerror("Error", f"Error adding member: {e}")
         finally:
             conn.close()
-
     def update_member():
         if not selected_member_id.get():
             messagebox.showwarning("Update", "Select a member to update")

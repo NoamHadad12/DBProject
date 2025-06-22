@@ -80,9 +80,8 @@ def open_traininglog_screen():
 
             memberid_entry.insert(0, values[1])
             programid_entry.insert(0, values[2])
-            duration_entry.insert(0, values[4])
-            repetitions_entry.insert(0, values[5])
-
+            duration_entry.insert(0, values[3])  # Changed from 4 to 3
+            repetitions_entry.insert(0, values[4])  # Changed from 5 to 4
     tree.bind("<<TreeviewSelect>>", on_row_select)
 
     # === Button Frame ===
@@ -97,7 +96,7 @@ def open_traininglog_screen():
         try:
             cur.execute("""
                         INSERT INTO traininglog (memberid, programid, duration, repetitions)
-                        VALUES (%s, %s, %s, %s, %s)
+                        VALUES (%s, %s, %s, %s)
                         """, (memberid_entry.get(), programid_entry.get(),
                               duration_entry.get(), repetitions_entry.get()))
             conn.commit()
