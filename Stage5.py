@@ -1,21 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import psycopg2
+from database_connection import connect_db
+from TrainingProgram import open_programs_screen
 
-# === PostgreSQL Connection ===
-def connect_db():
-    try:
-        conn = psycopg2.connect(
-            host="192.168.1.209",
-            port=5432,
-            database="mydatabase",
-            user="NoamHadad1",
-            password="Noam.123"
-        )
-        return conn
-    except Exception as e:
-        messagebox.showerror("Database Error", str(e))
-        return None
 
 # === CRUD Functions ===
 def fetch_members():
@@ -137,6 +125,7 @@ def main_menu():
     root.geometry("400x400")
 
     tk.Button(root, text="Manage Members", command=open_members_screen, width=20, height=2).pack(pady=20)
+    tk.Button(root, text="Manage Training Programs", command=open_programs_screen, width=20, height=2).pack(pady=20)
 
     root.mainloop()
 
