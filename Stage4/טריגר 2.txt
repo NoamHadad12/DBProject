@@ -1,0 +1,24 @@
+CREATE OR REPLACE FUNCTION public.set_payment_defaults()
+RETURNS trigger
+LANGUAGE plpgsql
+AS $BODY$
+BEGIN
+    IF NEW.amount IS NOT NULL AND NEW.amount < 0 THEN
+        RAISE EXCEPTION 'Payment amount cannot be negative.';
+    END IF;
+
+    IF NEW.paymentdate IS NULL THEN
+        NEW.paymentdate := CURRENT_DATE;
+    END IF;
+
+    IF NEW.payment_status IS NULL THEN
+        IF NEW.amount IS NOT NULL AND NEW.amount > 0 THEN
+            NEW.payment_status := 'Paid';
+        ELSE
+            NEW.payment_status := 'Debt';
+        END IF;
+    END IF;
+
+    RETURN NEW;
+END;
+$BODY$;
